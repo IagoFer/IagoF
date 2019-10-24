@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+ 
+xmlns:h="http://java.sun.com/jsf/html"
+ >
+ 
+<h:head>
+ 
+<title>Site de Cadastro</title>
+ 
+</h:head>
+ 
+<h:body style="background: url('http://2ipr.com.br/wp-content/uploads/2018/02/fundo-site1.jpg') repeat !important;">
+
+    
+<h1><h:outputText id="bemVindo" value="Bem vindo(a) ao sistema de cadastro." style=" color: navy"/></h1>
+
+<h2><h:outputText id="inserirDados" value="Porfavor insira seus dados abaixo: " style=" color: darkred"/></h2>
+    
+<h:form>
+ 
+<h:panelGrid columns="3">
+ 
+<h:outputLabel value="Nome:"/>
+ 
+<h:inputText id="nome" value="#{pessoaMB.pessoa.nome}" size="20"  required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="nome" />
+
+<h:outputLabel value="Login:"/>
+ 
+<h:inputText id="Login" value="#{pessoaMB.pessoa.login}" size="20"  required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="login" />
+
+<h:outputLabel value="Cpf:"/>
+ 
+<h:inputText id="Cpf" value="#{pessoaMB.pessoa.cpf}" size="20"  required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="cpf" />
+
+<h:outputLabel value="Email:"/>
+ 
+<h:inputText id="Email" value="#{pessoaMB.pessoa.email}" size="20"  required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="email" />
+
+<h:outputLabel value="Sexo:"/>
+ 
+<h:inputText id="Sexo" value="#{pessoaMB.pessoa.sexo}" size="20"  required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="sexo" />
+ 
+<h:outputLabel value="Endereço:"/>
+ 
+<h:inputText id="end" value="#{pessoaMB.pessoa.endereco}" size="20" required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="end" />
+ 
+<h:outputLabel value="Número:"/>
+ 
+<h:inputText id="nro" value="#{pessoaMB.pessoa.numero}" size="20" />
+ 
+<h:message for="nro" />
+ 
+<h:outputLabel value="Telefone:"/>
+ 
+<h:inputText id="tel" value="#{pessoaMB.pessoa.telefone}" size="20" />
+ 
+<h:message for="tel" />
+ 
+<h:outputLabel value="Cidade:"/>
+ 
+<h:inputText id="mun" value="#{pessoaMB.pessoa.cidade}" size="20" required="true" requiredMessage="Campo Obrigatório"/>
+ 
+<h:message for="mun" />
+ 
+<h:commandButton id="btnE" value="Cadastrar"  type="submit" action="#{pessoaMB.cadastrar}" />
+
+<h:commandButton id="btnL" value="Limpar" type="reset"/>
+
+
+</h:panelGrid>
+    
+</h:form>
+ 
+</h:body>
+ 
+</html>
